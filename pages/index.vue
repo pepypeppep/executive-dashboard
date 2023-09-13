@@ -31,6 +31,20 @@ const incomeChartOptions = {
   chart: {
     id: "income-chart",
   },
+  markers: { 
+      style: "inverted", 
+      size: 6 
+  }, 
+  tooltip: {
+    y: {
+      formatter: (value) => { 
+        return new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+              }).format(value)
+      },
+    },              
+  },
   xaxis: {
     categories: ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'],
   },
